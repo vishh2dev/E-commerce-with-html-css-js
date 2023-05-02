@@ -5,7 +5,7 @@ const products = [
     {
       id: 1,
       title: "Air Force",
-      price: 119,
+      price: 10000,
       colors: [
         {
           code: "black",
@@ -20,7 +20,7 @@ const products = [
     {
       id: 2,
       title: "Air Jordan",
-      price: 149,
+      price: 12200,
       colors: [
         {
           code: "lightgray",
@@ -35,7 +35,7 @@ const products = [
     {
       id: 3,
       title: "Blazer",
-      price: 109,
+      price: 9000,
       colors: [
         {
           code: "lightgray",
@@ -50,7 +50,7 @@ const products = [
     {
       id: 4,
       title: "Crater",
-      price: 129,
+      price: 11000,
       colors: [
         {
           code: "black",
@@ -65,7 +65,7 @@ const products = [
     {
       id: 5,
       title: "Hippie",
-      price: 99,
+      price: 8000,
       colors: [
         {
           code: "gray",
@@ -98,7 +98,7 @@ menuItems.forEach((item, index) => {
 
     //change texts of currentProduct
     currentProductTitle.textContent = choosenProduct.title;
-    currentProductPrice.textContent = "$" + choosenProduct.price;
+    currentProductPrice.textContent = "₹" + choosenProduct.price;
     currentProductImg.src = choosenProduct.colors[0].img;
 
     //assing new colors
@@ -111,5 +111,16 @@ menuItems.forEach((item, index) => {
 currentProductColors.forEach((color, index) => {
   color.addEventListener("click", () => {
     currentProductImg.src = choosenProduct.colors[index].img;
+  });
+});
+console.log('currentProductSizes',currentProductSizes)
+currentProductSizes.forEach((size, index) => {
+  size.addEventListener("click", () => {
+    currentProductSizes.forEach((size) => {
+      size.style.backgroundColor = "white";
+      size.style.color = "black";
+    });
+    size.style.backgroundColor = "black";
+    size.style.color = "white";
   });
 });

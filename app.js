@@ -113,7 +113,7 @@ currentProductColors.forEach((color, index) => {
     currentProductImg.src = choosenProduct.colors[index].img;
   });
 });
-console.log('currentProductSizes',currentProductSizes)
+
 currentProductSizes.forEach((size, index) => {
   size.addEventListener("click", () => {
     currentProductSizes.forEach((size) => {
@@ -124,3 +124,7 @@ currentProductSizes.forEach((size, index) => {
     size.style.color = "white";
   });
 });
+
+const productButton = document.querySelector(".productButton");
+const payment = document.querySelector(".payment");
+const close = document.querySelector(".close");
